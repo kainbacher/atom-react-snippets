@@ -75,6 +75,25 @@
     prefix: "_rsc"
     body: "import React from 'react';\n\nconst ${1} = ({${2}}) => (\n\t<div>${4}</div>\n);\n\n${1}.propTypes = {\n\t${2}: React.PropTypes.${3}\n};\n\nexport default ${1};"
 
+  "React: Component with this uggly, silly, fucking bracket 'i am a function' asshole":
+    prefix: "_rck"
+    body: """
+        import React, { PropTypes } from "react"
+
+        const ${1} = ({}) => {
+            return (
+            )
+        }
+
+        ${1}.propTypes = {
+        }
+
+        ${1}.defaultProps = {
+        }
+
+        export default ${1}
+    """
+
   "React: Stateless Function":
     prefix: "_rsf"
     body: "const ${1} = ({${2}}) => (\n\t<div>{${2}}</div>\n);"
